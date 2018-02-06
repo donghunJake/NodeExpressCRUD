@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<meta charset="utf-8">
+    <title>Employee Detail</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="container">
+      <h3><a href="/staffs">Employee List</a></h3>
+      <h1>Employee Detail</h1>
+      <table>
+        <tbody>
+          <tr>
+            <td>Name</td>
+            <td>:</td>
+            <td><%= staff.name %></td>
+          </tr>
+          <tr>
+            <td>Address</td>
+            <td>:</td>
+            <td><%= staff.address %></td>
+          </tr>
+          <tr>
+            <td>Position</td>
+            <td>:</td>
+            <td><%= staff.position %></td>
+          </tr>
+          <tr>
+            <td>Salary</td>
+            <td>:</td>
+            <td>$<%= staff.salary %>/year</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a href="/staffs/edit/<%= staff.id%>">EDIT</a></h3>
+      <form action="/staffs/delete/<%= staff.id%>" method="post">
+        <button type="submit">DELETE</button>
+      </form>
+    </div>
+  </body>
+</html>
